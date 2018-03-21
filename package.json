@@ -1,0 +1,30 @@
+{
+  "name": "px",
+  "version": "1.0.0",
+  "description": "react",
+  "main": "index.js",
+  "scripts": {
+    "start": "httpster -d ./dist -p 3000"
+  },
+  "author": "M",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer-loader": "^3.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "json-loader": "^0.5.7",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.1.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

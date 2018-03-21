@@ -1,0 +1,126 @@
+Author: Muhammad Mobeen Younis
+
+Install react-detector chrome extension
+Install react-developer-tools chrome extension
+
+Shortcut for react developer tools F12 or Ctrl + Shift + J 
+
+DOM: Document Object Model.
+DOM Diffing : React uses a virtual copy to compare differences in the new received view 
+and just changes minimal changes
+
+
+
+Install server handler using npm
+>>>     npm install -g httpster
+
+Navigate to the required directory & run httpster
+>>>     httpster -d ./dist -p 3000
+
+./dist is the folder of your index file, and your CMD path should be one staep back from the dist folder
+
+Creating a new Project
+>>>     npm init
+>>>     npm install --save-dev babel-cli
+or
+>>>     npm install -g babel-cli
+
+>>>     npm install --save-dev babel-preset-latest babel-preset-react babel-preset-stage-0
+
+>>>     babel ./src/index.js --out-file ./dist/bundle.js
+
+package.json
+"script":{
+    "start": "httpster -d ./dist -p 3000"
+}
+
+>>>     npm start
+
+# Using Web Pack:
+Installing webpack:
+
+>>>>    npm install webpack babel-loader webpack-dev-server --save-dev
+
+Errors:
+>>>> webpack
+Webpack not found
+
+Solutions:
+Global Installation:
+>>>>    sudo npm install -g webpack
+
+Non Global Installation:
+>>>>    ./node_modules/.bin/webpack
+
+The CLI moved into a separate package: webpack-cli.
+Please install 'webpack-cli' in addition to webpack itself to use the CLI.
+-> When using npm: npm install webpack-cli -D
+Try Following:
+
+> Install Webpack 2 => npm install webpack@2
+> Output file path should be absolute
+> "loaders" keyword is replaced by "rules" keyword
+> Remove "query" and "persist" section
+> Remove Public path
+
+Better option to continue with Webpack 4 is as follows: Install webpack, webpack-cli and webpack-dev-server together globally
+npm install webpack webpack-cli webpack-dev-server -g
+
+Then link global webpack to your Project
+npm link webpack
+
+
+
+To run webpack:
+webpack --mode development
+
+To run webpack continuously (Keep watching):
+webpack --mode development -w
+
+
+
+
+<> WHEN Running Apps, Run "start npm" in one CLI and "webpack -w" in another
+
+Loading JSON with Webpack:
+
+>>>>    npm install --save react react-dom (Then we can remove inline react inclusion calls in index.html)
+Also Install Json Loader & update webpack config file
+
+>>>>    npm install -save-dev json-loader
+
+Error: Unexpected token m in JSON at position 0
+Solution: Problem was in the import methodology, import json file as follows
+
+var greetings = require('./titles.json')
+
+
+
+
+Adding CSS using Webpack:
+Also Install CSS loaders and update webpack config file
+
+>>>>    npm install style-loader css-loader postcss-loader sass-loader node-sass --save-dev
+
+module: {
+        rules: [
+            { 
+                test: /\.js$/,
+                exclude: /(node_modules)/, 
+                use: 'babel-loader' 
+            }
+            ,
+            {   test: /\.css$/,  
+                use: ['style-loader','css-loader'] 
+            },
+            {   test: /\.scss$/,  
+                use: ['style-loader','css-loader','sass-loader'] 
+            }
+            
+        ]
+        }
+
+Install the NPM create-react-class package:
+
+npm install create-react-class --save-dev
+
