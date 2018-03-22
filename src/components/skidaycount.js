@@ -4,14 +4,14 @@ var createReactClass = require('create-react-class');
 
 //export const TodoComponent = createReactClass({ render:function(){ return(<h1>Helloooo</h1>); } });
 
-export const SkiDayCount = createReactClass({
+export class SkiDayCount extends React.Component{
     percentToDecimal(decimal){
         return((decimal*100 )+'%')
-    },
-    
+    }
+
     calcGoalProgress(total, goal){
         return (this.percentToDecimal(total/goal))
-    },
+    }
     render(){
         return (
             <div className="ski-day-count">
@@ -37,4 +37,4 @@ export const SkiDayCount = createReactClass({
             </div>
         )
     }
-})
+}
