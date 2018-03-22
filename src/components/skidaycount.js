@@ -8,6 +8,7 @@ export const SkiDayCount = createReactClass({
     percentToDecimal(decimal){
         return((decimal*100 )+'%')
     },
+    
     calcGoalProgress(total, goal){
         return (this.percentToDecimal(total/goal))
     },
