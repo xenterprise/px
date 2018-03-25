@@ -51,5 +51,6 @@ SkiDayCount.defaultprops = {
 SkiDayCount.propTypes = {
     total: PropTypes.number,
     powder:PropTypes.number,
-    backcountry:PropTypes.number
+    backcountry:PropTypes.number,
+    goal: propTypes.number 
 }

@@ -10,31 +10,7 @@ render(
     //      {hello} 
     //      {goodbye} 
     // </div>, 
-    <SkiDayList days={
-        [
-            {
-                resort : "Square Valley",
-                date : new Date("3/26/2018"),
-                powder : true,
-                backcountry : false
-
-            },
-            {
-                resort : "Silicon Valley",
-                date : new Date("3/27/2018"),
-                powder : false,
-                backcountry : true
-
-            },
-            {
-                resort : "New Valley",
-                date : new Date("3/28/2018"),
-                powder : true,
-                backcountry : true
-
-            }
-        ]
-    }/>,  
+    <SkiDayList days="Lots of days"/>,  
     document.getElementById('react-container')
 )
 

@@ -127,3 +127,9 @@ npm install create-react-class --save-dev
 React Icons: 
 
 npm install --save react-icons 
+
+Prop Types
+
+npm install prop-types --save
+
+
