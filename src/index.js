@@ -2,6 +2,7 @@ import React from 'react'
 import {render} from 'react-dom'
 import {hello, goodbye} from './lib'
 import {SkiDayList} from './components/skidaylist'
+import {SkidayCount} from './components/skidaycount'
 window.React = React
 
 
@@ -10,8 +11,36 @@ render(
     //      {hello} 
     //      {goodbye} 
     // </div>, 
-    <SkiDayList days="Lots of days"/>,  
+
+    <SkidayCount/>,
     document.getElementById('react-container')
+    
+    // <SkiDayList days={
+    //     [
+    //         {
+    //             resort : "Square Valley",
+    //             date : new Date("3/26/2018"),
+    //             powder : true,
+    //             backcountry : false
+
+    //         },
+    //         {
+    //             resort : "Silicon Valley",
+    //             date : new Date("3/27/2018"),
+    //             powder : false,
+    //             backcountry : true
+
+    //         },
+    //         {
+    //             resort : "New Valley",
+    //             date : new Date("3/28/2018"),
+    //             powder : true,
+    //             backcountry : true
+
+    //         }
+    //     ]
+    // }/>,  
+    // document.getElementById('react-container')
 )
 
 

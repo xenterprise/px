@@ -1,4 +1,3 @@
-import {Component, PropTypes} from 'react' 
 import '../stylesheets/ui.scss'
 import Terrain from 'react-icons/lib/md/terrain'
 import SnowFlake from 'react-icons/lib/ti/weather-snow'
@@ -46,6 +45,7 @@ SkiDayCount.defaultprops = {
     powder: 10,
     backcountry:15,
     goal: 75
+<<<<<<< HEAD
 }
 
 SkiDayCount.propTypes = {
@@ -53,4 +53,6 @@ SkiDayCount.propTypes = {
     powder:PropTypes.number,
     backcountry:PropTypes.number,
     goal: propTypes.number 
+=======
+>>>>>>> parent of 01708b8... Prop Types
 }
