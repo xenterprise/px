@@ -132,4 +132,49 @@ Prop Types
 
 npm install prop-types --save
 
+***************************************************** PROP TYPES ************************************
 
+React is no more shipped with PropTypes. You will need to install it.
+
+First install the prop-types package by running npm i prop-types --save.
+
+Next use the prop-types package into your component like this:
+
+import React from 'react'
+import PropTypes from 'prop-types'
+
+export const AwesomeComponent = props => {
+    return(
+        <h1>Hello {props.name}</h1>
+    )
+}
+
+AwesomeComponent.propTypes = {
+    name: PropTypes.string.isRequired
+}
+
+************************************************* React Create Class and React DOM Ignore just use ES6********************************************* 
+
+Per the documents, you need to get the npm create react class package. From the command line of your project's file path, you need to do "npm install create-react-class --save", and then modify the code like this:
+
+var React = require('react');
+//You need this npm package to do createReactClass
+var createReactClass = require('create-react-class');
+
+    module.exports=createReactClass({
+            render:function(){
+                return(
+                    <div>
+                        <h1> the list  </h1>
+                    </div>   
+                )
+            }
+You also need React DOM to render the components like this:
+
+npm install react react-dom
+var ReactDOM = require('react-dom');
+ReactDOM.render(<GroceryItemList/>,app);
+
+************************************************************* React Router ********************************************************
+
+npm install --save react-router

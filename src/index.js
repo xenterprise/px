@@ -1,46 +1,24 @@
+
 import React from 'react'
 import {render} from 'react-dom'
 import {hello, goodbye} from './lib'
-import {SkiDayList} from './components/skidaylist'
-import {SkidayCount} from './components/skidaycount'
+import {App} from './components/App'
+import {Whoops404} from './components/Whoops404'
+import {BrowserRouter, Route, Switch} from 'react-router-dom' 
+
+
 window.React = React
+console.log('I m here');
 
 
 render(
-    // <div>
-    //      {hello} 
-    //      {goodbye} 
-    // </div>, 
-
-    <SkidayCount/>,
-    document.getElementById('react-container')
-    
-    // <SkiDayList days={
-    //     [
-    //         {
-    //             resort : "Square Valley",
-    //             date : new Date("3/26/2018"),
-    //             powder : true,
-    //             backcountry : false
-
-    //         },
-    //         {
-    //             resort : "Silicon Valley",
-    //             date : new Date("3/27/2018"),
-    //             powder : false,
-    //             backcountry : true
-
-    //         },
-    //         {
-    //             resort : "New Valley",
-    //             date : new Date("3/28/2018"),
-    //             powder : true,
-    //             backcountry : true
-
-    //         }
-    //     ]
-    // }/>,  
-    // document.getElementById('react-container')
-)
-
+    <BrowserRouter>
+        <div>
+            <Switch>
+                <Route exact path = '/' component = {App}/>
+                <Route component = {Whoops404}/>   
+            </Switch>
+        </div>
+    </BrowserRouter>,  
+document.getElementById('react-container'));
 
